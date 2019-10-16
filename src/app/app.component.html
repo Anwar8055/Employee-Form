@@ -1,0 +1,75 @@
+
+  <div class="main">
+		<h1>Employee Form</h1>
+		<div class="w3_agile_main_grids">
+			<div class="agileits_w3layouts_main_grid">
+				<form id="upload" action="#" method="post" enctype="multipart/form-data">
+					<div class="agile_main_grid_left">
+
+              
+
+						<div class="w3_agileits_main_grid_left_grid">
+              <h3>Details :</h3>
+              <br>
+              <input type="Text" name="Employee ID" [(ngModel)]="emp.empId" placeholder="Employee ID" required="">
+              <br>
+  
+              <input type="text" name="Name" [(ngModel)]="emp.name" placeholder="Name" required="">
+              <br>
+              <input type="number" name="Age" min="1" [(ngModel)]="emp.age" placeholder="Age" required="">
+              <br>
+              <br>
+              <select id="w3_agileits_select" class="w3layouts_select" [(ngModel)]="emp.gender"  required="">
+                 
+                  <option value="male">Male</option>
+                  <option value="female">Female</option> 
+                  						
+                </select>
+              <br>
+              <br>
+						</div>
+						<div class="w3_agileits_qualifications">
+                <h3>Contact :</h3>
+              <br>
+              <input type="text" name="Home Number" [(ngModel)]="emp.homenum" placeholder="Home Number" required="">
+              <br>
+              <input type="email" name="Personal Email" [(ngModel)]="emp.pemail" placeholder="Personal Email" required="">
+              <br>
+              <input type="text" name="Office Number" [(ngModel)]="emp.offnum" placeholder="Office Number" required="">
+              <br>
+              <input type="email" name="OfficeEmail" [(ngModel)]="emp.offemail" placeholder="Office Email" required="">
+						</div>
+					</div>
+					<div class="agile_main_grid_left">
+            
+              <h3>Present Adress :</h3>
+              <br>
+            <input type="text" name="street address" [(ngModel)]="emp.prestreet" placeholder="street address" required="">
+            <br>
+            <input type="text" name="city" [(ngModel)]="emp.precity" placeholder="city" required=""> 
+            <input type="text" name="state" [(ngModel)]="emp.prestate" placeholder="state" required="">
+            <br>
+            <input type="text" name="country" [(ngModel)]="emp.precountry" placeholder="country" required="">
+            <br><br>
+            <h3>Permanent Adress :</h3>
+              <br>
+            <input type="text" name="street address" [(ngModel)]="emp.perstreet"placeholder="street address" required="">
+            <br>
+            <input type="text" name="city" [(ngModel)]="emp.percity" placeholder="city" required=""> 
+            <input type="text" name="state" [(ngModel)]="emp.perstate" placeholder="state" required="">
+            <br>
+            <input type="text" name="country" [(ngModel)]="emp.percountry" placeholder="country" required="">
+
+           				
+					</div>
+					<div class="clear"> </div>
+					<input type="submit"  (click)="onSubmit()" value="Submit ">
+        </form>
+        <br>
+        <br>
+        <ng2-smart-table [settings]="settings" [source]="data" (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="onSaveConfirm($event)"
+              (createConfirm)="onCreateConfirm($event)"></ng2-smart-table>
+			</div>
+		</div>
+		
+	</div>
